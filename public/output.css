@@ -488,6 +488,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 23px;
 }
 
+.-left-6 {
+  left: -1.5rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-12 {
+  left: 3rem;
+}
+
+.left-\[-\] {
+  left: -;
+}
+
+.left-\[-9\] {
+  left: -9;
+}
+
+.left-\[-9\%\] {
+  left: -9%;
+}
+
+.top-\[40\] {
+  top: 40;
+}
+
+.top-\[40\%\] {
+  top: 40%;
+}
+
+.left-\[98\] {
+  left: 98;
+}
+
+.left-\[98\%\] {
+  left: 98%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -714,6 +754,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex: 1 1 0%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -935,6 +979,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -962,6 +1010,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
 .font-semibold {
@@ -1006,12 +1058,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .hover\:scale-95:hover {

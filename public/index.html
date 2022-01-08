@@ -56,27 +56,26 @@
             
                         <span class="mb-2">From</span>
                        <form class="w-full "> 
-                        <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="text" placeholder="Choose date">
+                        <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="datetime-local" placeholder="Choose date">
                        </form>
                     
                     
                         <span class="mb-2">Until</span>
                         <form>
-                            <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="date" placeholder="Choose date">
+                            <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="datetime-local" placeholder="Choose date">
                            </form>
                     </div>
-                    <div class="flex  justify-center">
-                        <button type="button" class=" bg-blue-600 text-white rounded-md p-2">Search for cars</button>
-                    </div>
+                   
                 </div>
+                <div class="mt-60 hidden lg:block">
+                    <div class="lg:text-2xl text-center text-white font-semibold">Find the perfect car to explore</div>
+                    <div class=" lg:text-2xl text-white font-semibold text-center">the cities of lagos</div>
+                </div>
+                <button type="button" class="hidden lg:block bg-blue-600 text-white rounded-md px-7 py-3 ">Browse
+                    cars</button>
+        
             </div>
-            <div class="mt-60 hidden lg:block">
-                <div class="lg:text-2xl text-white font-semibold">Find the perfect car to explore</div>
-                <div class=" lg:text-2xl text-white font-semibold text-center">the cities of lagos</div>
-            </div>
-            <button type="button" class="hidden lg:block bg-blue-600 text-white rounded-md px-7 py-3">Browse
-                cars</button>
-        </div>
+           
     </section>
 
     <section class="relative bg-blue-50 bg-opacity-40">
@@ -354,16 +353,7 @@
                 el: '.swiper-scrollbar',
             },
         });
-        const burger = document.querySelector("#burger");
-const menu = document.querySelector("#menu");
-
-burger.addEventListener("click", ()=>{
-    if(menu.classList.contains("hidden")){
-        menu.classList.remove("hidden")
-    }else{
-        menu.classList.add("hidden")
-    }
-})
+       
     </script>
 
 
