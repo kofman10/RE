@@ -19,8 +19,8 @@
                 <li> <a href="">Careers</a></li>
                 <li> <a href="">Blog</a></li>
                 <li> <a href="">Contact</a></li>
-                <li> <a href="">login</a></li>
-                <a href=""><button type="button" class="bg-blue-600 text-white rounded-md px-7 py-3">Sign
+                <li> <a href="#" id="login">login</a></li>
+                <a href="#" id="signup"><button type="button" class="bg-blue-600 text-white rounded-md px-7 py-3">Sign
                         Up</button></a>
             </ul>
             <div id="burger" class="flex justify-end lg:hidden items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
@@ -30,11 +30,121 @@
         </div>
         </nav>
     </header>
-
     <section style="background-image: url(rent\ n\ ride\ images/driver.jpeg);"
         class="bg-no-repeat bg-cover lg:bg-top bg-center relative">
+       
+         
         <div class="bg-black w-full h-full absolute opacity-50 z-0"></div>
         <div class="flex flex-col gap-10 items-center py-20 relative z-10">
+                     <!--POPUP WHEN YOU CLICK SIGNUP-->
+                    
+                     <div id="popup" class="bg-white w-[40%] absolute  py-8 z-20 hidden">
+                        <div id="close" class="flex flex-1 justify-end mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                        <h1 class="text-center mt-8 text-3xl font-serif">Welcome to Rent n Ride</h1>
+                        <div class="flex flex-col gap-4 mx-8 relative pt-32">
+                            <div id="email" class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                              <span class="ml-2">continue with Email</span>
+                            </div>
+                            <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                                <img src="rent n ride images/google (1).png" alt="">
+                              <span class="ml-2">continue with Google</span>
+                            </div>
+                            <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                                <img src="rent n ride images/facebook (2).png" alt="">
+                              <span class="ml-2">continue with Facebook</span>
+                            </div>
+                           </div>
+                           <div class="flex justify-center items-center pt-20" >
+                          <span> Have an account?</span> <button id="login1" class="border-2 border-black px-4 py-2  ml-2">login</button>
+                        </div>
+                     </div>
+                    <!--POPUP FOR SIGN UP ENDS-->
+
+                    <!--POPUP WHEN USER CLICKS CONTINUE WITH EMAIL-->
+                    <div id="popup1" class="bg-white w-[40%] absolute py-8 z-20 hidden">
+                        <div id="close1" class="flex flex-1 justify-end mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                        <h1 class="text-center mt-8 text-3xl font-serif mb-7">Lets get started</h1>
+                        <form action=""> 
+                        <div class="container flex flex-row gap-6 ml-5">
+                        
+                            
+                                <input class=" focus:outline-none border border-black px-2 py-2 " type="text" placeholder="first name" required>
+                            
+                                
+                                <input class=" focus:outline-none border border-black px-2 py-2 ml-6" type="text" placeholder="lastname" required>
+                            
+                        </div>
+                          <span class="ml-5">Enter your name as it appears on your drivers license</span>
+                          <div class="flex flex-col mx-5 mt-5">
+                          <label for="Email">Email</label>
+                            <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>
+                            <label class="mt-5" for="password">password</label>
+                            <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required>
+                        </div>
+                        <div class="ml-5 mt-5">
+                            <input type="checkbox" required>I agree to the terms of service and privacy policy.
+                        </div>
+                        <div class ="ml-5">
+                            <input type="checkbox" required>Yes, send me deals, discounts and updates.
+                        </div>
+                        
+                        <div class = "flex justify-center mt-8">  
+                           <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2">Sign up</button>
+                        </div>
+                    </form>
+                      
+                     </div>
+                    <!--POPUP FOR CONTINUE WITH EMAIL ENDS-->
+                           
+
+                    <!--POPUP FOR WHEN USER CLICKS ON LOGIN-->
+                    <div id="popup2" class="bg-white w-[40%] absolute py-8 z-20 hidden">
+                        <div id="close2" class="flex flex-1 justify-end mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                        <h1 class="text-center mt-8 text-3xl font-serif mb-7">Welcome back</h1>
+                        <form action=""> 
+                        <div class="flex flex-col mx-5">
+                        
+                            <label for="Email">Email</label>
+                            <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>
+                            <label class="mt-5" for="password">password</label>
+                            <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required>
+                                <span class="text-right text-blue-600 cursor-default">Forgot password?</span>
+                        </div>
+                        <div class = "flex justify-center mt-8">  
+                            <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2 cursor-pointer">Log in</button>
+                         </div>
+
+                          <p class="text-center mt-7 mb-7">or</p>
+                           <div class = "mx-5"> 
+                          <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                            <img src="rent n ride images/google (1).png" alt="">
+                          <span class="ml-2">continue with Google</span>
+                        </div>
+                        <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer mt-3 ">
+                            <img src="rent n ride images/facebook (2).png" alt="">
+                          <span class="ml-2">continue with Facebook</span>
+                        </div>
+                    </div>
+                    </form>
+                        <div class="mt-10 flex justify-center">
+                       <span>Dont have an account? <span id="signup1" class = "text-blue-600 underline cursor-pointer">Sign up</span></span>
+                    </div> 
+                     </div>
+                    <!--POPUP FOR LOGIN CODE ENDS-->
             <h1 class="text-2xl lg:text-6xl text-white font-serif">Find your drive</h1>
             <h2 class="text-white text-sm lg:text-xl">Explore our car sharing marketplace</h2>
             <div class="border rounded-md lg:rounded-full bg-white lg:w-2/3 p-2 lg:mt-24 w-5/6">
@@ -44,11 +154,11 @@
                         <span class="mb-2">Where</span>
                         <form class="">
                             <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300 flex flex-row justify-between" type="text"placeholder="address">
-                               <!--  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                               <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
-                                </svg>-->
+                                </svg> -->
                             
 
                         </form>
@@ -355,7 +465,7 @@
         });
        
     </script>
-
+   <script src="script.js"></script>
 
 
     </section>
