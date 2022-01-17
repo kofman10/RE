@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+   list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* FOOTER STYLES STARTS HERE */
+
+
+.explore {
+    background: #1652f0;
+    box-shadow: 0px 4px 20px rgba(22, 82, 240, 0.25);
+    border-radius: 5px;
+    color: white;
+    margin: 1rem auto;
+    padding: 13px 34px;
+    font-weight: 300;
+    font-size: 18px;
+    display: block;
+  }
+  
+  .invite-text1 {
+    color: white;
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 44px;
+  }
+  
+  .invite-text2 {
+    color: white;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .invite-container {
+    background: url("./images/carimage.png") rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    padding: 70px 20px;q
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+  }
+  
+  .icon-container {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .top-footer {
+    background: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 70px;
+    font-size: 18px;
+  }
+  
+  .botton-footer {
+    background: #0e0e0f;
+    padding: 40px 70px;
+    color: white;
+  }
+  .sunnyside {
+    color: hsl(167, 40%, 24%);
+    font-size: 28px;
+  }
+  
+  .copyright {
+    color: #515454;
+  }
+  
+  .botton-footer-image {
+    position: absolute;
+    left: 6rem;
+  }
+
