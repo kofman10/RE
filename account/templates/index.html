@@ -1,10 +1,11 @@
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <title>Rent n Ride</title>
 </head>
@@ -12,9 +13,9 @@
 <body>
     <header class="mx-5 py-1">
         <nav class="flex flex-1 justify-between">
-            <img class="w-20 h-12" src="rent n ride images/Logo.jpg" alt="">
-           
-            <ul id ="menu"class="lg:flex  justify-end gap-5 items-center hidden mr-9">
+            <img class="w-20 h-12" src="{% static 'images/Logo.jpg'%}" alt="">
+
+            <ul id="menu" class="lg:flex  justify-end gap-5 items-center hidden mr-9">
                 <li class=" border-2 border-black px-2 py-2"><a href="">Lease your car</a></li>
                 <li> <a href="">Careers</a></li>
                 <li> <a href="">Blog</a></li>
@@ -23,169 +24,182 @@
                 <a href="#" id="signup"><button type="button" class="bg-blue-600 text-white rounded-md px-7 py-3">Sign
                         Up</button></a>
             </ul>
-            <div id="burger" class="flex justify-end lg:hidden items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div id="burger" class="flex justify-end lg:hidden items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-        </div>
+            </div>
         </nav>
     </header>
-    <section style="background-image: url(rent\ n\ ride\ images/driver.jpeg);"
-        class="bg-no-repeat bg-cover lg:bg-top bg-center relative">
-       
-         
+    <section style="background-image: url('{{STATIC_URL}} images/driver.jpeg');" class="bg-no-repeat bg-cover lg:bg-top bg-center relative">
+
+
         <div class="bg-black w-full h-full absolute opacity-50 z-0"></div>
         <div class="flex flex-col gap-10 items-center py-20 relative z-10">
-                     <!--POPUP WHEN YOU CLICK SIGNUP-->
-                    
-                     <div id="popup" class="bg-white w-[40%] absolute  py-8 z-20 hidden">
-                        <div id="close" class="flex flex-1 justify-end mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!--POPUP WHEN YOU CLICK SIGNUP-->
+
+            <div id="popup" class="bg-white w-[40%] absolute  py-8 z-20 hidden">
+                <div id="close" class="flex flex-1 justify-end mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                           </svg>
-                        </div>
-                        <h1 class="text-center mt-8 text-3xl font-serif">Welcome to Rent n Ride</h1>
-                        <div class="flex flex-col gap-4 mx-8 relative pt-32">
-                            <div id="email" class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                </div>
+                <h1 class="text-center mt-8 text-3xl font-serif">Welcome to Rent n Ride</h1>
+                <div class="flex flex-col gap-4 mx-8 relative pt-32">
+                    <div id="email" class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                               </svg>
-                              <span class="ml-2">continue with Email</span>
-                            </div>
-                            <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
-                                <img src="rent n ride images/google (1).png" alt="">
-                              <span class="ml-2">continue with Google</span>
-                            </div>
-                            <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
-                                <img src="rent n ride images/facebook (2).png" alt="">
-                              <span class="ml-2">continue with Facebook</span>
-                            </div>
-                           </div>
-                           <div class="flex justify-center items-center pt-20" >
-                          <span> Have an account?</span> <button id="login1" class="border-2 border-black px-4 py-2  ml-2">login</button>
-                        </div>
-                     </div>
-                    <!--POPUP FOR SIGN UP ENDS-->
+                        <span class="ml-2">continue with Email</span>
+                    </div>
+                    <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                        <img src="{% static 'images/google (1).png' %}" alt="">
+                        <span class="ml-2">continue with Google</span>
+                    </div>
+                    <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                        <img src="{% static 'images/facebook (2).png' %}" alt="">
+                        <span class="ml-2">continue with Facebook</span>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center pt-20">
+                    <span> Have an account?</span> <button id="login1" class="border-2 border-black px-4 py-2  ml-2">login</button>
+                </div>
+            </div>
+            <!--POPUP FOR SIGN UP ENDS-->
 
-                    <!--POPUP WHEN USER CLICKS CONTINUE WITH EMAIL-->
-                    <div id="popup1" class="bg-white w-[40%] absolute py-8 z-20 hidden">
-                        <div id="close1" class="flex flex-1 justify-end mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!--POPUP WHEN USER CLICKS CONTINUE WITH EMAIL-->
+            <div id="popup1" class="bg-white w-[40%] absolute py-8 z-20 hidden">
+                <div id="close1" class="flex flex-1 justify-end mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                           </svg>
-                        </div>
-                        <h1 class="text-center mt-8 text-3xl font-serif mb-7">Lets get started</h1>
-                        <form action=""> 
-                        <div class="container flex flex-row gap-6 ml-5">
-                        
-                            
-                                <input class=" focus:outline-none border border-black px-2 py-2 " type="text" placeholder="first name" required>
-                            
-                                
-                                <input class=" focus:outline-none border border-black px-2 py-2 ml-6" type="text" placeholder="lastname" required>
-                            
-                        </div>
-                          <span class="ml-5">Enter your name as it appears on your drivers license</span>
-                          <div class="flex flex-col mx-5 mt-5">
-                          <label for="Email">Email</label>
-                            <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>
-                            <label class="mt-5" for="password">password</label>
-                            <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required>
-                        </div>
-                        <div class="ml-5 mt-5">
-                            <input type="checkbox" required>I agree to the terms of service and privacy policy.
-                        </div>
-                        <div class ="ml-5">
-                            <input type="checkbox" required>Yes, send me deals, discounts and updates.
-                        </div>
-                        
-                        <div class = "flex justify-center mt-8">  
-                           <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2">Sign up</button>
-                        </div>
-                    </form>
-                      
-                     </div>
-                    <!--POPUP FOR CONTINUE WITH EMAIL ENDS-->
-                           
+                </div>
+                <h1 class="text-center mt-8 text-3xl font-serif mb-7">Lets get started</h1>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="container flex flex-row gap-4 ml-4">
 
-                    <!--POPUP FOR WHEN USER CLICKS ON LOGIN-->
-                    <div id="popup2" class="bg-white w-[40%] absolute py-8 z-20 hidden">
-                        <div id="close2" class="flex flex-1 justify-end mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- {{regform.username.label_tag}} {{regform.username}} -->
+                        <!-- <input class=" focus:outline-none border border-black px-2 py-2" type="text" placeholder="first name" required> -->
+                        <!-- <label for="first_name">First Name</label>  -->
+                        {{regform.first_name.label_tag}} {{regform.first_name}}
+
+
+                        <!-- </div> -->
+                        <!-- <div class="container flex flex-row gap-6 ml-5"> -->
+
+
+                        <!-- <input class=" focus:outline-none border border-black px-2 py-2 ml-6" type="text" placeholder="{{regform.name.first_name}}" required> -->
+                        {{regform.last_name.label_tag}}
+                        <!-- <label for="last_name">Last Name</label> -->
+                        {{regform.last_name}}
+                    </div>
+                    <span class="ml-5">Enter your name as it appears on your drivers license</span>
+                    <div class="flex flex-col mx-5 mt-5">
+                        <!-- <label for="Email">Email</label> -->
+                        {{regform.email.label_tag}}
+                        <!-- <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>  -->
+                        {{regform.email}}
+                        <!-- <label class="mt-5" for="password1">password</label>  -->
+
+                        {{regform.password1.label_tag}} {{regform.password1}}
+                        <!-- <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required> -->
+                        {{regform.password2.label_tag}} {{regform.password2}}
+
+                    </div>
+                    <div class="ml-5 mt-5">
+                        <input type="checkbox" required>I agree to the terms of service and privacy policy.
+                    </div>
+                    <div class="ml-5">
+                        <input type="checkbox" required>Yes, send me deals, discounts and updates.
+                    </div>
+
+                    <div class="flex justify-center mt-8">
+                        <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2" type="submit">Sign up</button>
+                    </div>
+                </form>
+
+            </div>
+            <!--POPUP FOR CONTINUE WITH EMAIL ENDS-->
+
+
+            <!--POPUP FOR WHEN USER CLICKS ON LOGIN-->
+            <div id="popup2" class="bg-white w-[40%] absolute py-8 z-20 hidden">
+                <div id="close2" class="flex flex-1 justify-end mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                           </svg>
-                        </div>
-                        <h1 class="text-center mt-8 text-3xl font-serif mb-7">Welcome back</h1>
-                        <form action=""> 
-                        <div class="flex flex-col mx-5">
-                        
-                            <label for="Email">Email</label>
-                            <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>
-                            <label class="mt-5" for="password">password</label>
-                            <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required>
-                                <span class="text-right text-blue-600 cursor-default">Forgot password?</span>
-                        </div>
-                        <div class = "flex justify-center mt-8">  
-                            <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2 cursor-pointer">Log in</button>
-                         </div>
+                </div>
+                <h1 class="text-center mt-8 text-3xl font-serif mb-7">Welcome back</h1>
+                <form action="">
+                    <div class="flex flex-col mx-5">
 
-                          <p class="text-center mt-7 mb-7">or</p>
-                           <div class = "mx-5"> 
-                          <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
-                            <img src="rent n ride images/google (1).png" alt="">
-                          <span class="ml-2">continue with Google</span>
+                        <label for="Email">Email</label>
+                        <input class=" focus:outline-none border border-black px-2 py-2" type="email" placeholder="Email" required>
+                        <label class="mt-5" for="password">password</label>
+                        <input class=" focus:outline-none border border-black px-2 py-2" type="password" placeholder="*********" required>
+                        <span class="text-right text-blue-600 cursor-default">Forgot password?</span>
+                    </div>
+                    <div class="flex justify-center mt-8">
+                        <button class="text-center border bg-blue-600 rounded-md text-white w-5/6 px-3 py-2 cursor-pointer">Log in</button>
+                    </div>
+
+                    <p class="text-center mt-7 mb-7">or</p>
+                    <div class="mx-5">
+                        <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer">
+                            <img src="{% static 'images/google (1).png' %}" alt="">
+                            <span class="ml-2">continue with Google</span>
                         </div>
                         <div class=" w-full border-2 border-gray-300 px-2 py-3 inline-flex justify-center cursor-pointer mt-3 ">
-                            <img src="rent n ride images/facebook (2).png" alt="">
-                          <span class="ml-2">continue with Facebook</span>
+                            <img src="{% static 'images/facebook (2).png' %}" alt="">
+                            <span class="ml-2">continue with Facebook</span>
                         </div>
                     </div>
-                    </form>
-                        <div class="mt-10 flex justify-center">
-                       <span>Dont have an account? <span id="signup1" class = "text-blue-600 underline cursor-pointer">Sign up</span></span>
-                    </div> 
-                     </div>
-                    <!--POPUP FOR LOGIN CODE ENDS-->
+                </form>
+                <div class="mt-10 flex justify-center">
+                    <span>Dont have an account? <span id="signup1" class = "text-blue-600 underline cursor-pointer">Sign up</span></span>
+                </div>
+            </div>
+            <!--POPUP FOR LOGIN CODE ENDS-->
             <h1 class="text-2xl lg:text-6xl text-white font-serif">Find your drive</h1>
             <h2 class="text-white text-sm lg:text-xl">Explore our car sharing marketplace</h2>
             <div class="border rounded-md lg:rounded-full bg-white lg:w-2/3 p-2 lg:mt-24 w-5/6">
 
                 <div class="flex flex-col gap-8 py-8 mx-4 lg:hidden">
-                    
-                        <span class="mb-2">Where</span>
-                        <form class="">
-                            <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300 flex flex-row justify-between" type="text"placeholder="address">
-                               <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+
+                    <span class="mb-2">Where</span>
+                    <form class="">
+                        <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300 flex flex-row justify-between" type="text" placeholder="address">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
                                 </svg> -->
-                            
 
-                        </form>
-                    
-            
-                        <span class="mb-2">From</span>
-                       <form class="w-full "> 
+
+                    </form>
+
+
+                    <span class="mb-2">From</span>
+                    <form class="w-full ">
                         <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="datetime-local" placeholder="Choose date">
-                       </form>
-                    
-                    
-                        <span class="mb-2">Until</span>
-                        <form>
-                            <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="datetime-local" placeholder="Choose date">
-                           </form>
-                    </div>
-                   
+                    </form>
+
+
+                    <span class="mb-2">Until</span>
+                    <form>
+                        <input class="w-full border-2 border-gray-300 px-2 py-3 text-gray-300" type="datetime-local" placeholder="Choose date">
+                    </form>
                 </div>
-                <div class="mt-60 hidden lg:block">
-                    <div class="lg:text-2xl text-center text-white font-semibold">Find the perfect car to explore</div>
-                    <div class=" lg:text-2xl text-white font-semibold text-center">the cities of lagos</div>
-                </div>
-                <button type="button" class="hidden lg:block bg-blue-600 text-white rounded-md px-7 py-3 ">Browse
-                    cars</button>
-        
+
             </div>
-           
+            <div class="mt-60 hidden lg:block">
+                <div class="lg:text-2xl text-center text-white font-semibold">Find the perfect car to explore</div>
+                <div class=" lg:text-2xl text-white font-semibold text-center">the cities of lagos</div>
+            </div>
+            <button type="button" class="hidden lg:block bg-blue-600 text-white rounded-md px-7 py-3 ">Browse
+                    cars</button>
+
+        </div>
+
     </section>
 
     <section class="relative bg-blue-50 bg-opacity-40">
@@ -217,15 +231,13 @@
                         <!--<div class="border border-black rounded-full w-8 h-8  text-center items-center">3</div>-->
                         <div>
                             <h4 class="mb-4">Hit the road</h4>
-                            <p>Have the car delivered or pick it up from your host.Check in with the app,grab the keys
-                                and hit the road!</p>
+                            <p>Have the car delivered or pick it up from your host.Check in with the app,grab the keys and hit the road!</p>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class=" lg:block ">
-                        <img class="lg:border lg:rounded-t-full w-full h-[154px] lg:w-[42rem] lg:h-[31rem] object-cover"
-                            src="rent n ride images/carkey.jpeg" alt="">
+                        <img class="lg:border lg:rounded-t-full w-full h-[154px] lg:w-[42rem] lg:h-[31rem] object-cover" src="{% static 'images/carkey.jpeg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -238,10 +250,7 @@
                 <div class="border-b-[3px] border-blue-600 container mx-auto w-[69px] lg:w-1/12 mt-1"></div>
             </div>
             <h4 class="text-2xl lg:text-5xl text-center my-6 font-serif font-medium">Endless options</h4>
-            <p class="text-sm text-center lg:w-[44rem] mx-auto lg:text-xl">Whether it's an SUV for a family, a pickup
-                truck for some errands, or a classic
-                sports car for a night out, find the perfect car for all kinds of occasions and budgets
-                on Rent n Ride.</p>
+            <p class="text-sm text-center lg:w-[44rem] mx-auto lg:text-xl">Whether it's an SUV for a family, a pickup truck for some errands, or a classic sports car for a night out, find the perfect car for all kinds of occasions and budgets on Rent n Ride.</p>
             <div class="flex justify-center mt-6">
                 <a href=""><button type="button"
                         class=" bg-blue-600 text-white rounded-md px-7 py-3 hover:shadow-xl hover:shadow-blue-400">Browse
@@ -259,31 +268,27 @@
                 <!-- Slides -->
                 <div class="swiper-slide ">
                     <div class="grid grid-cols-4 mx-20 gap-4 bg-gray-100">
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car8.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car8.jpeg'%}" alt="">
                             </div>
                             <div class=" text-center  my-10 ">Toyota</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car7.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car7.jpeg'%}" alt="">
                             </div>
                             <div class="text-center items-center my-10">Nissan</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car5.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car5.jpeg' %}" alt="">
                             </div>
                             <div class="text-center items-center my-10">Mercedez Benz</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car6.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car6.jpeg' %}" alt="">
                             </div>
                             <div class="text-center items-center my-10">Honda</div>
                         </div>
@@ -293,31 +298,27 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="grid grid-cols-4 mx-20 gap-4 bg-gray-100">
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car3.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car3.jpeg' %}" alt="">
                             </div>
                             <div class=" text-center  my-10 ">Lexus</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car.jpeg' %}" alt="">
                             </div>
                             <div class="text-center items-center my-10">BMW</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car4.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car4.jpeg' %}" alt="">
                             </div>
                             <div class="text-center items-center my-10">Acura</div>
                         </div>
-                        <div
-                            class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
+                        <div class="bg-white h-[352px] border-0 rounded-xl overflow-hidden hover:shadow-xl hover:scale-95 transition ease-out duration-300">
                             <div class="h-[239px]">
-                                <img class=" w-full h-full object-cover" src="rent n ride images/car2.jpeg" alt="">
+                                <img class=" w-full h-full object-cover" src="{% static 'images/car2.jpeg' %}" alt="">
                             </div>
                             <div class="text-center items-center my-10">Hyundai</div>
                         </div>
@@ -340,47 +341,47 @@
 
 
         <div class="lg:flex flex-row mt-20 gap-32 mx-20 relative hidden">
-            <div class="mt-20"> 
-            <div class="bg-black h-[540px] w-[540px] absolute z-0 left-[23px] bg-opacity-80"></div>
-            <div>
-                <div class="relative z-10 w-[540px] h-[609px]">
-             <img class="mt-[39px] w-full h-full object-cover" src="rent n ride images/woman.jpeg" alt="">
+            <div class="mt-20">
+                <div class="bg-black h-[540px] w-[540px] absolute z-0 left-[23px] bg-opacity-80"></div>
+                <div>
+                    <div class="relative z-10 w-[540px] h-[609px]">
+                        <img class="mt-[39px] w-full h-full object-cover" src="{% static 'images/woman.jpeg' %}" alt="">
+                    </div>
                 </div>
             </div>
-            </div>
             <div class="flex flex-col">
-           <span class="text-5xl font-semibold ">Why Rent n Ride?</span>
-           <span class="text-2xl font-semibold">Skip the rental counter</span>
-           <span class="mt-9 text-2xl font-semibold">24/7 support</span>
-           <p class="text-2xl font-light mt-5">Customer support is available online 24/7 to answer your questions.</p>
-           <span class="mt-9 text-2xl font-semibold">More money for you</span>
-           <p class="text-2xl font-light mt-5">Find deals on all kinds of drives — from the everyday to the extraordinary — complete with a better, more convenient experience. Find the perfect vehicle for your budget, starting at ₦15,000 per day.</p>
-           <span class="mt-9 text-2xl font-semibold">Convenient delivery options</span>
-           <p class="text-2xl font-light mt-5">Get your car delivered right to you or wherever you’re going. Many hosts offer delivery to custom locations or popular points of interest like airports, malls, and hotels.</p>
+                <span class="text-5xl font-semibold ">Why Rent n Ride?</span>
+                <span class="text-2xl font-semibold">Skip the rental counter</span>
+                <span class="mt-9 text-2xl font-semibold">24/7 support</span>
+                <p class="text-2xl font-light mt-5">Customer support is available online 24/7 to answer your questions.</p>
+                <span class="mt-9 text-2xl font-semibold">More money for you</span>
+                <p class="text-2xl font-light mt-5">Find deals on all kinds of drives — from the everyday to the extraordinary — complete with a better, more convenient experience. Find the perfect vehicle for your budget, starting at ₦15,000 per day.</p>
+                <span class="mt-9 text-2xl font-semibold">Convenient delivery options</span>
+                <p class="text-2xl font-light mt-5">Get your car delivered right to you or wherever you’re going. Many hosts offer delivery to custom locations or popular points of interest like airports, malls, and hotels.</p>
             </div>
-         </div>
-      
-        
+        </div>
+
+
     </section>
 
     <section>
         <div class="bg-blue-600 container flex flex-1 flex-col items-center gap-6 lg:hidden">
             <h5 class="text-2xl text-white">Why rent n ride</h5>
             <span class="text-white">skip the rental counter</span>
-             <div class ="bg-white flex flex-col items-center py-10 text-xs">
-                 <div class="mb-5 mt-1 text-sm font-bold">24/7 support</div>
-                   <span class="w-56 text-center">Customer support is available online 24/7 to answer your questions.</span>
-             </div>
-             <div class ="bg-white flex flex-col items-center py-10 text-xs">
-                <div class="mb-5 mt-1 font-bold text-sm">More money for you</div>
-                  <span class="w-56 text-center">Find deals on all kinds of drives — from the everyday to the extraordinary — complete with a better, more convenient experience. Find the perfect vehicle for your budget, starting at ₦15,000 per day.</span>
+            <div class="bg-white flex flex-col items-center py-10 text-xs">
+                <div class="mb-5 mt-1 text-sm font-bold">24/7 support</div>
+                <span class="w-56 text-center">Customer support is available online 24/7 to answer your questions.</span>
             </div>
-            <div class ="bg-white flex flex-col items-center py-10 text-xs mb-20">
+            <div class="bg-white flex flex-col items-center py-10 text-xs">
+                <div class="mb-5 mt-1 font-bold text-sm">More money for you</div>
+                <span class="w-56 text-center">Find deals on all kinds of drives — from the everyday to the extraordinary — complete with a better, more convenient experience. Find the perfect vehicle for your budget, starting at ₦15,000 per day.</span>
+            </div>
+            <div class="bg-white flex flex-col items-center py-10 text-xs mb-20">
                 <div class="mb-5 mt-1 font-bold text-sm">Convienient delivery options</div>
-                  <span class="w-56 text-center">Get your car delivered right to you or wherever you’re going. Many hosts offer delivery to custom locations or popular points of interest like airports, malls, and hotels.</span>
+                <span class="w-56 text-center">Get your car delivered right to you or wherever you’re going. Many hosts offer delivery to custom locations or popular points of interest like airports, malls, and hotels.</span>
             </div>
         </div>
-       
+
     </section>
 
     <!--<section >
@@ -402,45 +403,41 @@
     </section>-->
 
     <section class="bg-blue-50 bg-opacity-40 ">
-     <div class="pt-10 mx-4">
-     <h6 class = "mx-auto text-center font-serif text-2xl mb-7 font-bold lg:text-5xl lg:w-[671px]">Start building your business plan</h6>
-     <p class="mx-auto lg:text-2xl lg:font-thin text-center mb-7 lg:w-[700px]">List your first car to get started today and build your plan to take control of your 
-        financial future tomorrow.</p>
-        <div class="flex  justify-center">
-            <button type="button" class="hover:shadow-lg hover:shadow-blue-500  bg-blue-600 text-white rounded-md p-2 px-7">Get started </button>
+        <div class="pt-10 mx-4">
+            <h6 class="mx-auto text-center font-serif text-2xl mb-7 font-bold lg:text-5xl lg:w-[671px]">Start building your business plan</h6>
+            <p class="mx-auto lg:text-2xl lg:font-thin text-center mb-7 lg:w-[700px]">List your first car to get started today and build your plan to take control of your financial future tomorrow.</p>
+            <div class="flex  justify-center">
+                <button type="button" class="hover:shadow-lg hover:shadow-blue-500  bg-blue-600 text-white rounded-md p-2 px-7">Get started </button>
+            </div>
         </div>
-     </div>
-     <figure class="flex justify-end md:hidden lg:hidden mr-3"> 
-     <div class=" bg-blue-600 h-8 w-8 border rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="#fff">
+        <figure class="flex justify-end md:hidden lg:hidden mr-3">
+            <div class=" bg-blue-600 h-8 w-8 border rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="#fff">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
           </svg>
-    </div>
-</figure>
-<div class="hidden lg:block">
-<div>
-    <h6 class= "text-5xl font-serif font-bold">Fuel your dreams</h6>
-    <p class="font-thin w-[577px] mt-4 text-2xl">Stoke your wanderlust with some articles to teach you about 
-        our hosts, investments and  aspring entrepreneurs.</p>
-        <figure class="ml-[28rem]"> 
-        <div class="border-b-[3px] border-blue-600  w-[69px] lg:w-1/12 mt-3"></div>
-        <div class="ml-8">
-            <div class="border-b-[3px] border-blue-600  w-[69px] lg:w-1/12 mt-1"></div>
+            </div>
+        </figure>
+        <div class="hidden lg:block">
+            <div>
+                <h6 class="text-5xl font-serif font-bold">Fuel your dreams</h6>
+                <p class="font-thin w-[577px] mt-4 text-2xl">Stoke your wanderlust with some articles to teach you about our hosts, investments and aspring entrepreneurs.</p>
+                <figure class="ml-[28rem]">
+                    <div class="border-b-[3px] border-blue-600  w-[69px] lg:w-1/12 mt-3"></div>
+                    <div class="ml-8">
+                        <div class="border-b-[3px] border-blue-600  w-[69px] lg:w-1/12 mt-1"></div>
+                    </div>
+                </figure>
+            </div>
+            <div class="container w-5/6 h-[652px]">
+                <img class="h-full w-full object-cover" src="{% static 'images/bus.jpg' %}" alt="">
+            </div>
         </div>
-    </figure>
-</div>
-<div class="container w-5/6 h-[652px]">
-    <img class="h-full w-full object-cover" src="rent n ride images/bus.jpg" alt="">
-</div>
-</div>
     </section>
-    
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
@@ -463,9 +460,8 @@
                 el: '.swiper-scrollbar',
             },
         });
-       
     </script>
-   <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
 
     </section>
