@@ -1,0 +1,108 @@
+<section class="relative bg-blue-50 bg-opacity-40">
+             <div class="py-20 mx-20"> 
+             <h3 class="text-5xl font-serif text-center mb-28">How Rent n Ride works 
+                 
+                    <div class="border-b-[3px] border-blue-600 container mx-auto w-1/12 mt-5"></div> <div class="border-b-[3px] border-blue-600 container ml-[33rem] w-1/12 mt-1 "></div>
+                 
+             </h3>
+             <div class=" container flex flex-row  gap-16"> 
+                <div class="flex flex-col  gap-12 text-2xl relative"> 
+                    <div class="flex flex-row gap-2">
+                        <!--<div class="border border-black rounded-full w-8 h-8 text-center items-center">1</div>-->
+                        <div>
+                            <h4 class="mb-4">Find the perfect car</h4>
+                            <p>Enter a location and date and browse thousands of car shared by local host</p>
+                        </div>
+                      </div>
+                      <div class="flex flex-row gap-2">
+                        <!--<div class="border border-black rounded-full w-8 h-8 text-center items-center">2</div>-->
+                        <div>
+                            <h4 class="mb-4">Book your trip</h4>
+                            <p>Book on the rent n ride web app,choose a protection plan and say hi to your host!</p>
+                        </div>
+                      </div>
+                      <div class="flex flex-row gap-2">
+                        <!--<div class="border border-black rounded-full w-8 h-8  text-center items-center">3</div>-->
+                        <div>
+                            <h4 class="mb-4">Hit the road</h4>
+                            <p>Have the car delivered or pick it up from your host.Check in with the app,grab the keys and hit the road!</p>
+                        </div>
+                      </div>
+                 </div>
+                 <div>
+                     <div>
+                      <img class="border rounded-t-full w-[42rem] h-[31rem]" src="rent n ride images/carkey.jpeg" alt="">
+                     </div>
+                 </div>
+             </div>
+             </div>
+              <!-- 3rd section-->
+              <div class=""> 
+             <div class="mx-20">
+                <div class="border-b-[3px] border-blue-600 container mx-auto w-1/12 mt-5"></div> <div class="border-b-[3px] border-blue-600 container ml-[33rem] w-1/12 mt-1 "></div>
+                <h4 class="text-5xl text-center my-6 font-serif font-medium">Endless options</h4>
+            </div>
+               
+                <p class="container text-center w-[44rem] text-xl">Whether it’s an SUV for a family, a pickup truck for some errands, or a classic 
+                    sports car for a night out, find the perfect car for all kinds of occasions and budgets
+                     on Rent n Ride.</p>
+                     <div class="flex justify-center mt-6">
+                     <a href=""><button type="button" class=" bg-blue-600 text-white rounded-md px-7 py-3 hover:shadow-xl hover:shadow-blue-400">Browse cars</button></a>
+                    </div>
+                    <p class="mt-16 ml-20">Browse by make</p>
+                    <!-- Slider main container -->
+<div class="swiper flex justify-center items-center h-[239]">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">  
+          
+          <div class="grid grid-cols-4 mx-20 gap-4 bg-white"> 
+        <div class="bg-white h-[239px]">
+            <img class="w-full h-full object-cover" src="rent n ride images/car8.jpeg" alt="">
+            
+        </div>
+        <div class="h-[239px]">
+        <img class="w-full h-full object-cover" src="rent n ride images/car7.jpeg" alt="">
+    </div>
+    <div class="h-[239px]"> 
+        <img class="w-full h-full object-cover" src="rent n ride images/car5.jpeg" alt="">
+    </div>
+    <div class="h-[239px]"> 
+        <img class="w-full h-full object-cover" src="rent n ride images/car6.jpeg" alt="">
+    </div>
+      </div>
+    </div>
+      <div class="swiper-slide">
+        <div class="grid grid-cols-4 mx-20 gap-4 ">
+            <div class="h-[239px]">
+            <img class="w-full h-full object-cover" src="rent n ride images/car3.jpeg" alt="">
+        </div> 
+        <div class="h-[239px]"> 
+            <img class="w-full h-full object-cover" src="rent n ride images/car.jpeg" alt="">
+        </div>
+        <div class="h-[239px]"> 
+            <img class="w-full h-full object-cover" src="rent n ride images/car4.jpeg" alt="">
+        </div>
+        <div >
+            <img class="w-full h-full object-cover" src="rent n ride images/car2.jpeg" alt="">
+        </div>
+          </div>
+      </div>
+     
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+             </section>
+             
+            
+            start
