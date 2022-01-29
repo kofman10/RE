@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'tailwind_theme',
 ]
 
+TAILWIND_APP_NAME = 'tailwind_theme'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -53,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rentnride.urls'
+
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
