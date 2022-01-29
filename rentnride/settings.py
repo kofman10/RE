@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'account',
     'tailwind_theme',
 ]
-
+# added tailwind_app
 TAILWIND_APP_NAME = 'tailwind_theme'
+#change authentication from username to email
 AUTH_USER_MODEL = 'account.Account'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rentnride.urls'
-
+#adde address for tailwind app
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
